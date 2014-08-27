@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7A268FDD1985529C00D578EA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A268FDC1985529C00D578EA /* Cocoa.framework */; };
+		7A268FE71985529C00D578EA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7A268FE51985529C00D578EA /* InfoPlist.strings */; };
+		7A268FE91985529C00D578EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A268FE81985529C00D578EA /* main.m */; };
+		7A268FED1985529D00D578EA /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7A268FEB1985529D00D578EA /* Credits.rtf */; };
+		7A268FF01985529D00D578EA /* CDDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A268FEF1985529D00D578EA /* CDDocument.m */; };
+		7A268FF81985529D00D578EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A268FF71985529D00D578EA /* Images.xcassets */; };
+		7A2F0B9619AB24F800D2540D /* CDDiodeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2F0B9419AB24F800D2540D /* CDDiodeDetailViewController.m */; };
+		7A2F0B9A19AB252400D2540D /* CDDiodeDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A2F0B9819AB252400D2540D /* CDDiodeDetailView.xib */; };
+		7A6D531F19A6878900B6B3E3 /* CDToolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D531E19A6878900B6B3E3 /* CDToolsViewController.m */; };
+		7A70ACAD19A4B0F900160CBE /* CD2DArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A70ACA819A4B0F900160CBE /* CD2DArray.m */; };
+		7A70ACAE19A4B0F900160CBE /* CD2DBaseTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A70ACA919A4B0F900160CBE /* CD2DBaseTypes.m */; };
+		7A70ACAF19A4B0F900160CBE /* CDCircuitObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A70ACAA19A4B0F900160CBE /* CDCircuitObject.m */; };
+		7A70ACB019A4B0F900160CBE /* CDCircuitPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A70ACAB19A4B0F900160CBE /* CDCircuitPanel.m */; };
+		7A70ACB119A4B0F900160CBE /* CDConnectionElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A70ACAC19A4B0F900160CBE /* CDConnectionElement.m */; };
+		7A70ACC119A4B16800160CBE /* CDConnectionElementDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A70ACB419A4B16800160CBE /* CDConnectionElementDetailViewController.m */; };
+		7A70ACC219A4B16800160CBE /* CDDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A70ACB619A4B16800160CBE /* CDDetailViewController.m */; };
+		7A70ACC319A4B16800160CBE /* CDEditorClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A70ACB819A4B16800160CBE /* CDEditorClipView.m */; };
+		7A70ACC419A4B16800160CBE /* CDEditorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A70ACBA19A4B16800160CBE /* CDEditorView.m */; };
+		7A70ACC519A4B16800160CBE /* CDEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A70ACBC19A4B16800160CBE /* CDEditorViewController.m */; };
+		7A70ACC619A4B16800160CBE /* CDFlippedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A70ACBE19A4B16800160CBE /* CDFlippedView.m */; };
+		7A70ACC719A4B16800160CBE /* CDWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A70ACC019A4B16800160CBE /* CDWindowController.m */; };
+		7A942C3B19898EB700F1E96C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A268FF41985529D00D578EA /* MainMenu.xib */; };
+		7A942C3C19898EBE00F1E96C /* CDDocumentWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A268FF11985529D00D578EA /* CDDocumentWindow.xib */; };
+		7AE88A1619935CD700CFFC55 /* CDConnectionElementDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AE88A1819935CD700CFFC55 /* CDConnectionElementDetailView.xib */; };
+		7AEAC9C119A931AA0040516D /* CDDiode.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AEAC9C019A931AA0040516D /* CDDiode.m */; };
+		7AEAC9C419A939580040516D /* CDCircuitObjectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AEAC9C319A939580040516D /* CDCircuitObjectView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7A268FD91985529C00D578EA /* Circuit Drawer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Circuit Drawer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A268FDC1985529C00D578EA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		7A268FDF1985529C00D578EA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		7A268FE01985529C00D578EA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7A268FE11985529C00D578EA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7A268FE41985529C00D578EA /* Circuit Drawer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Circuit Drawer-Info.plist"; sourceTree = "<group>"; };
+		7A268FE61985529C00D578EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7A268FE81985529C00D578EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7A268FEA1985529C00D578EA /* Circuit Drawer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Circuit Drawer-Prefix.pch"; sourceTree = "<group>"; };
+		7A268FEC1985529D00D578EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		7A268FEE1985529D00D578EA /* CDDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDDocument.h; sourceTree = "<group>"; };
+		7A268FEF1985529D00D578EA /* CDDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDDocument.m; sourceTree = "<group>"; };
+		7A268FF21985529D00D578EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/CDDocumentWindow.xib; sourceTree = "<group>"; };
+		7A268FF51985529D00D578EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		7A268FF71985529D00D578EA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7A2F0B9319AB24F800D2540D /* CDDiodeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDDiodeDetailViewController.h; path = View/CDDiodeDetailViewController.h; sourceTree = "<group>"; };
+		7A2F0B9419AB24F800D2540D /* CDDiodeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDDiodeDetailViewController.m; path = View/CDDiodeDetailViewController.m; sourceTree = "<group>"; };
+		7A2F0B9919AB252400D2540D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/CDDiodeDetailView.xib; sourceTree = "<group>"; };
+		7A6D531D19A6878900B6B3E3 /* CDToolsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDToolsViewController.h; path = View/CDToolsViewController.h; sourceTree = "<group>"; };
+		7A6D531E19A6878900B6B3E3 /* CDToolsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDToolsViewController.m; path = View/CDToolsViewController.m; sourceTree = "<group>"; };
+		7A70ACA319A4B0F900160CBE /* CD2DArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CD2DArray.h; path = Model/CD2DArray.h; sourceTree = "<group>"; };
+		7A70ACA419A4B0F900160CBE /* CD2DBaseTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CD2DBaseTypes.h; path = Model/CD2DBaseTypes.h; sourceTree = "<group>"; };
+		7A70ACA519A4B0F900160CBE /* CDCircuitObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDCircuitObject.h; path = Model/CDCircuitObject.h; sourceTree = "<group>"; };
+		7A70ACA619A4B0F900160CBE /* CDCircuitPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDCircuitPanel.h; path = Model/CDCircuitPanel.h; sourceTree = "<group>"; };
+		7A70ACA719A4B0F900160CBE /* CDConnectionElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDConnectionElement.h; path = Model/CDConnectionElement.h; sourceTree = "<group>"; };
+		7A70ACA819A4B0F900160CBE /* CD2DArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CD2DArray.m; path = Model/CD2DArray.m; sourceTree = "<group>"; };
+		7A70ACA919A4B0F900160CBE /* CD2DBaseTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CD2DBaseTypes.m; path = Model/CD2DBaseTypes.m; sourceTree = "<group>"; };
+		7A70ACAA19A4B0F900160CBE /* CDCircuitObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDCircuitObject.m; path = Model/CDCircuitObject.m; sourceTree = "<group>"; };
+		7A70ACAB19A4B0F900160CBE /* CDCircuitPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDCircuitPanel.m; path = Model/CDCircuitPanel.m; sourceTree = "<group>"; };
+		7A70ACAC19A4B0F900160CBE /* CDConnectionElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDConnectionElement.m; path = Model/CDConnectionElement.m; sourceTree = "<group>"; };
+		7A70ACB319A4B16800160CBE /* CDConnectionElementDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDConnectionElementDetailViewController.h; path = View/CDConnectionElementDetailViewController.h; sourceTree = "<group>"; };
+		7A70ACB419A4B16800160CBE /* CDConnectionElementDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDConnectionElementDetailViewController.m; path = View/CDConnectionElementDetailViewController.m; sourceTree = "<group>"; };
+		7A70ACB519A4B16800160CBE /* CDDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDDetailViewController.h; path = View/CDDetailViewController.h; sourceTree = "<group>"; };
+		7A70ACB619A4B16800160CBE /* CDDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDDetailViewController.m; path = View/CDDetailViewController.m; sourceTree = "<group>"; };
+		7A70ACB719A4B16800160CBE /* CDEditorClipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDEditorClipView.h; path = View/CDEditorClipView.h; sourceTree = "<group>"; };
+		7A70ACB819A4B16800160CBE /* CDEditorClipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDEditorClipView.m; path = View/CDEditorClipView.m; sourceTree = "<group>"; };
+		7A70ACB919A4B16800160CBE /* CDEditorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDEditorView.h; path = View/CDEditorView.h; sourceTree = "<group>"; };
+		7A70ACBA19A4B16800160CBE /* CDEditorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDEditorView.m; path = View/CDEditorView.m; sourceTree = "<group>"; };
+		7A70ACBB19A4B16800160CBE /* CDEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDEditorViewController.h; path = View/CDEditorViewController.h; sourceTree = "<group>"; };
+		7A70ACBC19A4B16800160CBE /* CDEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDEditorViewController.m; path = View/CDEditorViewController.m; sourceTree = "<group>"; };
+		7A70ACBD19A4B16800160CBE /* CDFlippedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDFlippedView.h; path = View/CDFlippedView.h; sourceTree = "<group>"; };
+		7A70ACBE19A4B16800160CBE /* CDFlippedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDFlippedView.m; path = View/CDFlippedView.m; sourceTree = "<group>"; };
+		7A70ACBF19A4B16800160CBE /* CDWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDWindowController.h; path = View/CDWindowController.h; sourceTree = "<group>"; };
+		7A70ACC019A4B16800160CBE /* CDWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDWindowController.m; path = View/CDWindowController.m; sourceTree = "<group>"; };
+		7AE88A1719935CD700CFFC55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/CDConnectionElementDetailView.xib; sourceTree = "<group>"; };
+		7AEAC9BF19A931AA0040516D /* CDDiode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDDiode.h; path = Model/CDDiode.h; sourceTree = "<group>"; };
+		7AEAC9C019A931AA0040516D /* CDDiode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDDiode.m; path = Model/CDDiode.m; sourceTree = "<group>"; };
+		7AEAC9C219A939580040516D /* CDCircuitObjectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDCircuitObjectView.h; path = View/CDCircuitObjectView.h; sourceTree = "<group>"; };
+		7AEAC9C319A939580040516D /* CDCircuitObjectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDCircuitObjectView.m; path = View/CDCircuitObjectView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7A268FD61985529C00D578EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A268FDD1985529C00D578EA /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7A268FD01985529C00D578EA = {
+			isa = PBXGroup;
+			children = (
+				7A268FE21985529C00D578EA /* Circuit Drawer */,
+				7A268FDB1985529C00D578EA /* Frameworks */,
+				7A268FDA1985529C00D578EA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7A268FDA1985529C00D578EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A268FD91985529C00D578EA /* Circuit Drawer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7A268FDB1985529C00D578EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A268FDC1985529C00D578EA /* Cocoa.framework */,
+				7A268FDE1985529C00D578EA /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A268FDE1985529C00D578EA /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A268FDF1985529C00D578EA /* AppKit.framework */,
+				7A268FE01985529C00D578EA /* CoreData.framework */,
+				7A268FE11985529C00D578EA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		7A268FE21985529C00D578EA /* Circuit Drawer */ = {
+			isa = PBXGroup;
+			children = (
+				7A26901A1986895A00D578EA /* Model */,
+				7A2690131985536D00D578EA /* View */,
+				7A26901C1986897700D578EA /* Document */,
+				7A268FF41985529D00D578EA /* MainMenu.xib */,
+				7A268FE31985529C00D578EA /* Supporting Files */,
+			);
+			path = "Circuit Drawer";
+			sourceTree = "<group>";
+		};
+		7A268FE31985529C00D578EA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7A268FF71985529D00D578EA /* Images.xcassets */,
+				7A268FE41985529C00D578EA /* Circuit Drawer-Info.plist */,
+				7A268FE51985529C00D578EA /* InfoPlist.strings */,
+				7A268FE81985529C00D578EA /* main.m */,
+				7A268FEA1985529C00D578EA /* Circuit Drawer-Prefix.pch */,
+				7A268FEB1985529D00D578EA /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7A2690131985536D00D578EA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7A26901B1986896600D578EA /* Assisant Views */,
+				7A6D531C19A6874D00B6B3E3 /* Tools View */,
+				7A70AC9E19A4AFE500160CBE /* Editor View */,
+				7A942C48198D41F700F1E96C /* Detail View */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7A26901A1986895A00D578EA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7A70ACA419A4B0F900160CBE /* CD2DBaseTypes.h */,
+				7A70ACA919A4B0F900160CBE /* CD2DBaseTypes.m */,
+				7A70ACA319A4B0F900160CBE /* CD2DArray.h */,
+				7A70ACA819A4B0F900160CBE /* CD2DArray.m */,
+				7A70ACB219A4B12A00160CBE /* Circuit Objects */,
+				7A70ACA619A4B0F900160CBE /* CDCircuitPanel.h */,
+				7A70ACAB19A4B0F900160CBE /* CDCircuitPanel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7A26901B1986896600D578EA /* Assisant Views */ = {
+			isa = PBXGroup;
+			children = (
+				7A70ACB719A4B16800160CBE /* CDEditorClipView.h */,
+				7A70ACB819A4B16800160CBE /* CDEditorClipView.m */,
+				7A70ACBD19A4B16800160CBE /* CDFlippedView.h */,
+				7A70ACBE19A4B16800160CBE /* CDFlippedView.m */,
+			);
+			name = "Assisant Views";
+			sourceTree = "<group>";
+		};
+		7A26901C1986897700D578EA /* Document */ = {
+			isa = PBXGroup;
+			children = (
+				7A268FEE1985529D00D578EA /* CDDocument.h */,
+				7A268FEF1985529D00D578EA /* CDDocument.m */,
+				7A70ACBF19A4B16800160CBE /* CDWindowController.h */,
+				7A70ACC019A4B16800160CBE /* CDWindowController.m */,
+				7A268FF11985529D00D578EA /* CDDocumentWindow.xib */,
+			);
+			name = Document;
+			sourceTree = "<group>";
+		};
+		7A2F0B9B19AB254E00D2540D /* Connection Element */ = {
+			isa = PBXGroup;
+			children = (
+				7A70ACB319A4B16800160CBE /* CDConnectionElementDetailViewController.h */,
+				7A70ACB419A4B16800160CBE /* CDConnectionElementDetailViewController.m */,
+				7AE88A1819935CD700CFFC55 /* CDConnectionElementDetailView.xib */,
+			);
+			name = "Connection Element";
+			sourceTree = "<group>";
+		};
+		7A2F0B9C19AB255800D2540D /* Diode */ = {
+			isa = PBXGroup;
+			children = (
+				7A2F0B9319AB24F800D2540D /* CDDiodeDetailViewController.h */,
+				7A2F0B9419AB24F800D2540D /* CDDiodeDetailViewController.m */,
+				7A2F0B9819AB252400D2540D /* CDDiodeDetailView.xib */,
+			);
+			name = Diode;
+			sourceTree = "<group>";
+		};
+		7A6D531C19A6874D00B6B3E3 /* Tools View */ = {
+			isa = PBXGroup;
+			children = (
+				7A6D531D19A6878900B6B3E3 /* CDToolsViewController.h */,
+				7A6D531E19A6878900B6B3E3 /* CDToolsViewController.m */,
+				7AEAC9C219A939580040516D /* CDCircuitObjectView.h */,
+				7AEAC9C319A939580040516D /* CDCircuitObjectView.m */,
+			);
+			name = "Tools View";
+			sourceTree = "<group>";
+		};
+		7A70AC9E19A4AFE500160CBE /* Editor View */ = {
+			isa = PBXGroup;
+			children = (
+				7A70ACBB19A4B16800160CBE /* CDEditorViewController.h */,
+				7A70ACBC19A4B16800160CBE /* CDEditorViewController.m */,
+				7A70ACB919A4B16800160CBE /* CDEditorView.h */,
+				7A70ACBA19A4B16800160CBE /* CDEditorView.m */,
+			);
+			name = "Editor View";
+			sourceTree = "<group>";
+		};
+		7A70AC9F19A4AFFB00160CBE /* Detail Views */ = {
+			isa = PBXGroup;
+			children = (
+				7A2F0B9B19AB254E00D2540D /* Connection Element */,
+				7A2F0B9C19AB255800D2540D /* Diode */,
+			);
+			name = "Detail Views";
+			sourceTree = "<group>";
+		};
+		7A70ACB219A4B12A00160CBE /* Circuit Objects */ = {
+			isa = PBXGroup;
+			children = (
+				7A70ACA519A4B0F900160CBE /* CDCircuitObject.h */,
+				7A70ACAA19A4B0F900160CBE /* CDCircuitObject.m */,
+				7A70ACA719A4B0F900160CBE /* CDConnectionElement.h */,
+				7A70ACAC19A4B0F900160CBE /* CDConnectionElement.m */,
+				7AEAC9BF19A931AA0040516D /* CDDiode.h */,
+				7AEAC9C019A931AA0040516D /* CDDiode.m */,
+			);
+			name = "Circuit Objects";
+			sourceTree = "<group>";
+		};
+		7A942C48198D41F700F1E96C /* Detail View */ = {
+			isa = PBXGroup;
+			children = (
+				7A70ACB519A4B16800160CBE /* CDDetailViewController.h */,
+				7A70ACB619A4B16800160CBE /* CDDetailViewController.m */,
+				7A70AC9F19A4AFFB00160CBE /* Detail Views */,
+			);
+			name = "Detail View";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7A268FD81985529C00D578EA /* Circuit Drawer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A26900D1985529D00D578EA /* Build configuration list for PBXNativeTarget "Circuit Drawer" */;
+			buildPhases = (
+				7A268FD51985529C00D578EA /* Sources */,
+				7A268FD61985529C00D578EA /* Frameworks */,
+				7A268FD71985529C00D578EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Circuit Drawer";
+			productName = "Circuit Drawer";
+			productReference = 7A268FD91985529C00D578EA /* Circuit Drawer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7A268FD11985529C00D578EA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CD;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "AP-Software";
+			};
+			buildConfigurationList = 7A268FD41985529C00D578EA /* Build configuration list for PBXProject "Circuit Drawer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7A268FD01985529C00D578EA;
+			productRefGroup = 7A268FDA1985529C00D578EA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7A268FD81985529C00D578EA /* Circuit Drawer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7A268FD71985529C00D578EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A942C3C19898EBE00F1E96C /* CDDocumentWindow.xib in Resources */,
+				7A268FF81985529D00D578EA /* Images.xcassets in Resources */,
+				7A268FE71985529C00D578EA /* InfoPlist.strings in Resources */,
+				7AE88A1619935CD700CFFC55 /* CDConnectionElementDetailView.xib in Resources */,
+				7A268FED1985529D00D578EA /* Credits.rtf in Resources */,
+				7A942C3B19898EB700F1E96C /* MainMenu.xib in Resources */,
+				7A2F0B9A19AB252400D2540D /* CDDiodeDetailView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7A268FD51985529C00D578EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AEAC9C119A931AA0040516D /* CDDiode.m in Sources */,
+				7A6D531F19A6878900B6B3E3 /* CDToolsViewController.m in Sources */,
+				7A70ACC219A4B16800160CBE /* CDDetailViewController.m in Sources */,
+				7A70ACC319A4B16800160CBE /* CDEditorClipView.m in Sources */,
+				7AEAC9C419A939580040516D /* CDCircuitObjectView.m in Sources */,
+				7A70ACC119A4B16800160CBE /* CDConnectionElementDetailViewController.m in Sources */,
+				7A70ACB019A4B0F900160CBE /* CDCircuitPanel.m in Sources */,
+				7A268FE91985529C00D578EA /* main.m in Sources */,
+				7A70ACB119A4B0F900160CBE /* CDConnectionElement.m in Sources */,
+				7A70ACC519A4B16800160CBE /* CDEditorViewController.m in Sources */,
+				7A70ACC419A4B16800160CBE /* CDEditorView.m in Sources */,
+				7A70ACAF19A4B0F900160CBE /* CDCircuitObject.m in Sources */,
+				7A2F0B9619AB24F800D2540D /* CDDiodeDetailViewController.m in Sources */,
+				7A70ACC619A4B16800160CBE /* CDFlippedView.m in Sources */,
+				7A70ACAD19A4B0F900160CBE /* CD2DArray.m in Sources */,
+				7A70ACC719A4B16800160CBE /* CDWindowController.m in Sources */,
+				7A70ACAE19A4B0F900160CBE /* CD2DBaseTypes.m in Sources */,
+				7A268FF01985529D00D578EA /* CDDocument.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7A268FE51985529C00D578EA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A268FE61985529C00D578EA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7A268FEB1985529D00D578EA /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A268FEC1985529D00D578EA /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		7A268FF11985529D00D578EA /* CDDocumentWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A268FF21985529D00D578EA /* Base */,
+			);
+			name = CDDocumentWindow.xib;
+			sourceTree = "<group>";
+		};
+		7A268FF41985529D00D578EA /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A268FF51985529D00D578EA /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		7A2F0B9819AB252400D2540D /* CDDiodeDetailView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A2F0B9919AB252400D2540D /* Base */,
+			);
+			name = CDDiodeDetailView.xib;
+			sourceTree = "<group>";
+		};
+		7AE88A1819935CD700CFFC55 /* CDConnectionElementDetailView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7AE88A1719935CD700CFFC55 /* Base */,
+			);
+			name = CDConnectionElementDetailView.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7A26900B1985529D00D578EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7A26900C1985529D00D578EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		7A26900E1985529D00D578EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Circuit Drawer/Circuit Drawer-Prefix.pch";
+				INFOPLIST_FILE = "Circuit Drawer/Circuit Drawer-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7A26900F1985529D00D578EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Circuit Drawer/Circuit Drawer-Prefix.pch";
+				INFOPLIST_FILE = "Circuit Drawer/Circuit Drawer-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7A268FD41985529C00D578EA /* Build configuration list for PBXProject "Circuit Drawer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A26900B1985529D00D578EA /* Debug */,
+				7A26900C1985529D00D578EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A26900D1985529D00D578EA /* Build configuration list for PBXNativeTarget "Circuit Drawer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A26900E1985529D00D578EA /* Debug */,
+				7A26900F1985529D00D578EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7A268FD11985529C00D578EA /* Project object */;
+}
