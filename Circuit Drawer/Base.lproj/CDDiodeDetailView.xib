@@ -121,6 +121,9 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
+                    <connections>
+                        <action selector="pushedRotateLeft:" target="-2" id="ZIf-Ra-qf3"/>
+                    </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1wa-by-8oe">
                     <rect key="frame" x="14" y="78" width="118" height="32"/>
@@ -132,6 +135,9 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
+                    <connections>
+                        <action selector="pushedRotateRight:" target="-2" id="drb-wn-jRW"/>
+                    </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="K4S-hR-4sA">
                     <rect key="frame" x="14" y="45" width="118" height="32"/>
@@ -143,6 +149,9 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
+                    <connections>
+                        <action selector="pushedMirror:" target="-2" id="9sO-fB-EGl"/>
+                    </connections>
                 </button>
             </subviews>
             <constraints>

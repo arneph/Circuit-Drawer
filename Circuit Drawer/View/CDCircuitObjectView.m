@@ -13,14 +13,8 @@
 
 #define CDCircuitObjectsDragType @"de.AP-Software.CircuitDrawer.CDCircuitObjectsDragType"
 
-static NSImage *diodeImage;
-
 @implementation CDCircuitObjectView
 @synthesize circuitObjectClass = _circuitObjectClass;
-
-+ (void)initialize{
-    diodeImage = [NSImage imageNamed: @"Diode"];
-}
 
 - (void)awakeFromNib{
     _circuitObjectClass = [CDDiode class];

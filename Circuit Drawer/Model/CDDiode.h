@@ -16,6 +16,9 @@
 @property CD2DSides anode;
 @property CD2DSides cathode;
 
+- (instancetype)initWithAnode: (CD2DSides)anode;
+- (instancetype)initWithCathode: (CD2DSides)cathode;
+
 - (void)rotateLeft;
 - (void)rotateRight;
 - (void)mirror;

@@ -32,6 +32,28 @@
     return self;
 }
 
+- (instancetype)initWithAnode:(CD2DSides)anode{
+    self = [super init];
+    if (self) {
+        _anode = CD2DSideLeft;
+        _cathode = CD2DSideRight;
+        
+        [self setAnode: anode];
+    }
+    return self;
+}
+
+- (instancetype)initWithCathode:(CD2DSides)cathode{
+    self = [super init];
+    if (self) {
+        _anode = CD2DSideLeft;
+        _cathode = CD2DSideRight;
+        
+        [self setCathode: cathode];
+    }
+    return self;
+}
+
 - (instancetype)initWithCoder: (NSCoder *)aDecoder{
     self = [super initWithCoder: aDecoder];
     if (self) {

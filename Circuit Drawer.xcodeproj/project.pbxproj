@@ -80,6 +80,7 @@
 		7A70ACBE19A4B16800160CBE /* CDFlippedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDFlippedView.m; path = View/CDFlippedView.m; sourceTree = "<group>"; };
 		7A70ACBF19A4B16800160CBE /* CDWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDWindowController.h; path = View/CDWindowController.h; sourceTree = "<group>"; };
 		7A70ACC019A4B16800160CBE /* CDWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDWindowController.m; path = View/CDWindowController.m; sourceTree = "<group>"; };
+		7A7B335319AE7B7D0047A543 /* ToDo.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ToDo.txt; sourceTree = "<group>"; };
 		7AE88A1719935CD700CFFC55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/CDConnectionElementDetailView.xib; sourceTree = "<group>"; };
 		7AEAC9BF19A931AA0040516D /* CDDiode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDDiode.h; path = Model/CDDiode.h; sourceTree = "<group>"; };
 		7AEAC9C019A931AA0040516D /* CDDiode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDDiode.m; path = Model/CDDiode.m; sourceTree = "<group>"; };
@@ -138,6 +139,7 @@
 		7A268FE21985529C00D578EA /* Circuit Drawer */ = {
 			isa = PBXGroup;
 			children = (
+				7A7B335319AE7B7D0047A543 /* ToDo.txt */,
 				7A26901A1986895A00D578EA /* Model */,
 				7A2690131985536D00D578EA /* View */,
 				7A26901C1986897700D578EA /* Document */,

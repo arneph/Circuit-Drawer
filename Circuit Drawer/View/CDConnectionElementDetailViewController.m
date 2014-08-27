@@ -194,11 +194,9 @@
     BOOL connectionsOnlyCross = ((NSNumber *)info[@"connectionsOnlyCross"]).boolValue;
     CDCircuitObject *object = (CDCircuitObject *)[_circuitPanel.array objectAtCoordinate: coordinateFromDictionary(coordinateDict)];
     
-    if (![object isKindOfClass: [CDConnectionElement class]]) return;
+    if (!object || ![object isKindOfClass: [CDConnectionElement class]]) return;
     
     CDConnectionElement *connectionElement = (CDConnectionElement *)object;
-    
-    if (!connectionElement) return;
     
     BOOL connectionsDidOnlyCross = connectionElement.connectionsOnlyCross;
     

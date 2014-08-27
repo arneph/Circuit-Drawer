@@ -1103,23 +1103,139 @@
     [[NSColor blackColor] set];
     [NSBezierPath setDefaultLineWidth: 1.5];
     
-    [NSBezierPath strokeLineFromPoint: NSMakePoint(x1 * squareWidth,
-                                                   (x2 + 0.5) * squareWidth)
-                              toPoint: NSMakePoint((x1 + 1) * squareWidth,
-                                                   (x2 + 0.5) * squareWidth)];
-    NSBezierPath *trianglePath = [[NSBezierPath alloc] init];
-    [trianglePath moveToPoint: NSMakePoint((x1 + 0.3) * squareWidth,
-                                           (x2 + 0.7) * squareWidth)];
-    [trianglePath lineToPoint: NSMakePoint((x1 + 0.3) * squareWidth,
-                                           (x2 + 0.3) * squareWidth)];
-    [trianglePath lineToPoint: NSMakePoint((x1 + 0.7) * squareWidth,
-                                           (x2 + 0.5) * squareWidth)];
-    [trianglePath fill];
+    NSBezierPath *baseLine = [[NSBezierPath alloc] init];
+    NSBezierPath *triangle = [[NSBezierPath alloc] init];
+    NSBezierPath *limitLine = [[NSBezierPath alloc] init];
     
-    [NSBezierPath strokeLineFromPoint: NSMakePoint((x1 + 0.7) * squareWidth,
-                                                   (x2 + 0.3) * squareWidth)
-                              toPoint: NSMakePoint((x1 + 0.7) * squareWidth,
-                                                   (x2 + 0.7) * squareWidth)];
+    if ([diode hasConnectionToSide: CD2DSideRight]) {
+        [baseLine moveToPoint: NSMakePoint(x1 * squareWidth,
+                                           (x2 + 0.5) * squareWidth)];
+        [baseLine lineToPoint: NSMakePoint((x1 + 1) * squareWidth,
+                                           (x2 + 0.5) * squareWidth)];
+        
+        if (diode.anode == CD2DSideLeft) {
+            [triangle moveToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.3 * cos(0.75 * M_PI)),
+                                               ((x2 + 0.5) * squareWidth) + (squareWidth* 0.3 * sin(0.75 * M_PI)))];
+            [triangle lineToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.3 * cos(1.25 * M_PI)),
+                                               ((x2 + 0.5) * squareWidth) + (squareWidth* 0.3 * sin(1.25 * M_PI)))];
+            [triangle lineToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.212 * cos(0.0 * M_PI)),
+                                               ((x2 + 0.5) * squareWidth) + (squareWidth* 0.212 * sin(0.0 * M_PI)))];
+            
+            [limitLine moveToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.3 * cos(0.25 * M_PI)),
+                                                ((x2 + 0.5) * squareWidth) + (squareWidth* 0.3 * sin(0.25 * M_PI)))];
+            [limitLine lineToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.3 * cos(-0.25 * M_PI)),
+                                                ((x2 + 0.5) * squareWidth) + (squareWidth* 0.3 * sin(-0.25 * M_PI)))];
+        }else{
+            [triangle moveToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.3 * cos(-0.25 * M_PI)),
+                                               ((x2 + 0.5) * squareWidth) + (squareWidth* 0.3 * sin(-0.25 * M_PI)))];
+            [triangle lineToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.3 * cos(0.25 * M_PI)),
+                                               ((x2 + 0.5) * squareWidth) + (squareWidth* 0.3 * sin(0.25 * M_PI)))];
+            [triangle lineToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.212 * cos(1 * M_PI)),
+                                               ((x2 + 0.5) * squareWidth) + (squareWidth* 0.212 * sin(1 * M_PI)))];
+            
+            [limitLine moveToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.3 * cos(1.25 * M_PI)),
+                                                ((x2 + 0.5) * squareWidth) + (squareWidth* 0.3 * sin(1.25 * M_PI)))];
+            [limitLine lineToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.3 * cos(0.75 * M_PI)),
+                                                ((x2 + 0.5) * squareWidth) + (squareWidth* 0.3 * sin(0.75 * M_PI)))];
+        }
+    }else if ([diode hasConnectionToSide: CD2DSideTopRight]) {
+        [baseLine moveToPoint: NSMakePoint(x1 * squareWidth,
+                                           x2 * squareWidth)];
+        [baseLine lineToPoint: NSMakePoint((x1 + 1) * squareWidth,
+                                           (x2 + 1) * squareWidth)];
+        
+        if (diode.anode == CD2DSideBottomLeft) {
+            [triangle moveToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.3 * cos(1.0 * M_PI)),
+                                               ((x2 + 0.5) * squareWidth) + (squareWidth* 0.3 * sin(1.0 * M_PI)))];
+            [triangle lineToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.3 * cos(1.5 * M_PI)),
+                                               ((x2 + 0.5) * squareWidth) + (squareWidth* 0.3 * sin(1.5 * M_PI)))];
+            [triangle lineToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.212 * cos(0.25 * M_PI)),
+                                               ((x2 + 0.5) * squareWidth) + (squareWidth* 0.212 * sin(0.25 * M_PI)))];
+            
+            [limitLine moveToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.3 * cos(0.5 * M_PI)),
+                                                ((x2 + 0.5) * squareWidth) + (squareWidth* 0.3 * sin(0.5 * M_PI)))];
+            [limitLine lineToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.3 * cos(0.0 * M_PI)),
+                                                ((x2 + 0.5) * squareWidth) + (squareWidth* 0.3 * sin(0.0 * M_PI)))];
+        }else{
+            [triangle moveToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.3 * cos(0.0 * M_PI)),
+                                               ((x2 + 0.5) * squareWidth) + (squareWidth* 0.3 * sin(0.0 * M_PI)))];
+            [triangle lineToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.3 * cos(0.5 * M_PI)),
+                                               ((x2 + 0.5) * squareWidth) + (squareWidth* 0.3 * sin(0.5 * M_PI)))];
+            [triangle lineToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.212 * cos(1.25 * M_PI)),
+                                               ((x2 + 0.5) * squareWidth) + (squareWidth* 0.212 * sin(1.25 * M_PI)))];
+            
+            [limitLine moveToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.3 * cos(1.5 * M_PI)),
+                                                ((x2 + 0.5) * squareWidth) + (squareWidth* 0.3 * sin(1.5 * M_PI)))];
+            [limitLine lineToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.3 * cos(1.0 * M_PI)),
+                                                ((x2 + 0.5) * squareWidth) + (squareWidth* 0.3 * sin(1.0 * M_PI)))];
+        }
+    }else if ([diode hasConnectionToSide: CD2DSideTop]) {
+        [baseLine moveToPoint: NSMakePoint((x1 + 0.5) * squareWidth,
+                                           x2 * squareWidth)];
+        [baseLine lineToPoint: NSMakePoint((x1 + 0.5) * squareWidth,
+                                           (x2 + 1) * squareWidth)];
+        
+        if (diode.anode == CD2DSideBottom) {
+            [triangle moveToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.3 * cos(1.25 * M_PI)),
+                                               ((x2 + 0.5) * squareWidth) + (squareWidth* 0.3 * sin(1.25 * M_PI)))];
+            [triangle lineToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.3 * cos(1.75 * M_PI)),
+                                               ((x2 + 0.5) * squareWidth) + (squareWidth* 0.3 * sin(1.75 * M_PI)))];
+            [triangle lineToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.212 * cos(0.5 * M_PI)),
+                                               ((x2 + 0.5) * squareWidth) + (squareWidth* 0.212 * sin(0.5 * M_PI)))];
+            
+            [limitLine moveToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.3 * cos(0.75 * M_PI)),
+                                                ((x2 + 0.5) * squareWidth) + (squareWidth* 0.3 * sin(0.75 * M_PI)))];
+            [limitLine lineToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.3 * cos(0.25 * M_PI)),
+                                                ((x2 + 0.5) * squareWidth) + (squareWidth* 0.3 * sin(0.25 * M_PI)))];
+        }else{
+            [triangle moveToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.3 * cos(0.25 * M_PI)),
+                                               ((x2 + 0.5) * squareWidth) + (squareWidth* 0.3 * sin(0.25 * M_PI)))];
+            [triangle lineToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.3 * cos(0.75 * M_PI)),
+                                               ((x2 + 0.5) * squareWidth) + (squareWidth* 0.3 * sin(0.75 * M_PI)))];
+            [triangle lineToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.212 * cos(-0.5 * M_PI)),
+                                               ((x2 + 0.5) * squareWidth) + (squareWidth* 0.212 * sin(-0.5 * M_PI)))];
+            
+            [limitLine moveToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.3 * cos(1.75 * M_PI)),
+                                                ((x2 + 0.5) * squareWidth) + (squareWidth* 0.3 * sin(1.75 * M_PI)))];
+            [limitLine lineToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.3 * cos(1.25 * M_PI)),
+                                                ((x2 + 0.5) * squareWidth) + (squareWidth* 0.3 * sin(1.25 * M_PI)))];
+        }
+    }else if ([diode hasConnectionToSide: CD2DSideTopLeft]) {
+        [baseLine moveToPoint: NSMakePoint(x1 * squareWidth,
+                                           (x2 + 1) * squareWidth)];
+        [baseLine lineToPoint: NSMakePoint((x1 + 1) * squareWidth,
+                                           x2 * squareWidth)];
+        
+        if (diode.anode == CD2DSideBottomRight) {
+            [triangle moveToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.3 * cos(1.5 * M_PI)),
+                                               ((x2 + 0.5) * squareWidth) + (squareWidth* 0.3 * sin(1.5 * M_PI)))];
+            [triangle lineToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.3 * cos(0 * M_PI)),
+                                               ((x2 + 0.5) * squareWidth) + (squareWidth* 0.3 * sin(0 * M_PI)))];
+            [triangle lineToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.212 * cos(0.75 * M_PI)),
+                                               ((x2 + 0.5) * squareWidth) + (squareWidth* 0.212 * sin(0.75 * M_PI)))];
+            
+            [limitLine moveToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.3 * cos(1.0 * M_PI)),
+                                                ((x2 + 0.5) * squareWidth) + (squareWidth* 0.3 * sin(1.0 * M_PI)))];
+            [limitLine lineToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.3 * cos(0.5 * M_PI)),
+                                                ((x2 + 0.5) * squareWidth) + (squareWidth* 0.3 * sin(0.5 * M_PI)))];
+        }else{
+            [triangle moveToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.3 * cos(0.5 * M_PI)),
+                                               ((x2 + 0.5) * squareWidth) + (squareWidth* 0.3 * sin(0.5 * M_PI)))];
+            [triangle lineToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.3 * cos(1 * M_PI)),
+                                               ((x2 + 0.5) * squareWidth) + (squareWidth* 0.3 * sin(1 * M_PI)))];
+            [triangle lineToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.212 * cos(-0.25 * M_PI)),
+                                               ((x2 + 0.5) * squareWidth) + (squareWidth* 0.212 * sin(-0.25 * M_PI)))];
+            
+            [limitLine moveToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.3 * cos(0.0 * M_PI)),
+                                                ((x2 + 0.5) * squareWidth) + (squareWidth* 0.3 * sin(0.0 * M_PI)))];
+            [limitLine lineToPoint: NSMakePoint(((x1 + 0.5) * squareWidth) + (squareWidth * 0.3 * cos(-0.5 * M_PI)),
+                                                ((x2 + 0.5) * squareWidth) + (squareWidth* 0.3 * sin(-0.5 * M_PI)))];
+        }
+    }
+    
+    [baseLine stroke];
+    [triangle fill];
+    [limitLine stroke];
 }
                        
 - (void)drawSelectionInRect: (NSRect)dirtyRect{
